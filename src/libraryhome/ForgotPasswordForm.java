@@ -1,10 +1,8 @@
 package libraryhome;
 
-import javax.swing.*;
+public class ForgotPasswordForm extends javax.swing.JFrame {
 
-class DashboardLibrarian extends javax.swing.JFrame {
-
-    public DashboardLibrarian() {
+    public ForgotPasswordForm() {
         initComponents();
     }
 
@@ -16,23 +14,23 @@ class DashboardLibrarian extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Librarian Dashboard");
+        jLabel1.setText("Forgot Password Form");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(148, 148, 148)
+                .addGap(109, 109, 109)
                 .addComponent(jLabel1)
-                .addContainerGap(150, Short.MAX_VALUE))
+                .addContainerGap(112, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(130, 130, 130)
+                .addGap(107, 107, 107)
                 .addComponent(jLabel1)
-                .addContainerGap(155, Short.MAX_VALUE))
+                .addContainerGap(123, Short.MAX_VALUE))
         );
 
         pack();
@@ -41,7 +39,7 @@ class DashboardLibrarian extends javax.swing.JFrame {
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new DashboardLibrarian().setVisible(true);
+                new ForgotPasswordForm().setVisible(true);
             }
         });
     }
@@ -50,4 +48,3 @@ class DashboardLibrarian extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
-

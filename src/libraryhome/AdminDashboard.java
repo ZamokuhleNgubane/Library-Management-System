@@ -1,8 +1,11 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
 package libraryhome;
+
+import java.awt.Font;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.UIManager;
 
 /**
  *
@@ -31,8 +34,11 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        jButtonAddLibrarian = new javax.swing.JButton();
+        jButtonViewLibrarian = new javax.swing.JButton();
+        jButtonDeleteLibrarian = new javax.swing.JButton();
+        jButtonLogout = new javax.swing.JButton();
+        jButtonBack = new javax.swing.JButton();
 
         jLabel4.setText("jLabel4");
 
@@ -47,11 +53,45 @@ public class AdminDashboard extends javax.swing.JFrame {
         jLabel3.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
         jLabel3.setText("Delete Librarian");
 
-        jButton1.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        jButton1.setText("Logout");
+        jButtonAddLibrarian.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jButtonAddLibrarian.setText("Add Librarian");
+        jButtonAddLibrarian.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jButtonAddLibrarianActionPerformed(evt);
+            }
+        });
 
-        jButton2.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
-        jButton2.setText("Back");
+        jButtonViewLibrarian.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jButtonViewLibrarian.setText("View Librarian");
+        jButtonViewLibrarian.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jButtonViewLibrarianActionPerformed(evt);
+            }
+        });
+
+        jButtonDeleteLibrarian.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jButtonDeleteLibrarian.setText("Delete Librarian");
+        jButtonDeleteLibrarian.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jButtonDeleteLibrarianActionPerformed(evt);
+            }
+        });
+
+        jButtonLogout.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jButtonLogout.setText("Logout");
+        jButtonLogout.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jButtonLogoutActionPerformed(evt);
+            }
+        });
+
+        jButtonBack.setFont(new java.awt.Font("Yu Gothic Medium", 0, 14)); // NOI18N
+        jButtonBack.setText("Back");
+        jButtonBack.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent evt) {
+                jButtonBackActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -59,36 +99,32 @@ public class AdminDashboard extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(131, 131, 131)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, 105, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(81, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel3)
-                        .addGap(109, 109, 109))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1)
-                        .addGap(57, 57, 57)
-                        .addComponent(jButton2)
-                        .addGap(47, 47, 47))))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jButtonAddLibrarian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonViewLibrarian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jButtonDeleteLibrarian, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(68, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(23, 23, 23)
+                .addComponent(jButtonLogout)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButtonBack)
+                .addGap(17, 17, 17))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(29, 29, 29)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 45, Short.MAX_VALUE)
-                .addComponent(jLabel2)
-                .addGap(43, 43, 43)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2))
-                .addGap(15, 15, 15))
+                .addGap(19, 19, 19)
+                .addComponent(jButtonAddLibrarian)
+                .addGap(18, 18, 18)
+                .addComponent(jButtonViewLibrarian)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButtonDeleteLibrarian)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 27, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButtonLogout)
+                    .addComponent(jButtonBack))
+                .addGap(20, 20, 20))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -111,6 +147,29 @@ public class AdminDashboard extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButtonAddLibrarianActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButtonAddLibrarianActionPerformed
+        new AddLibrarianWindow().setVisible(true);
+    }//GEN-LAST:event_jButtonAddLibrarianActionPerformed
+
+    private void jButtonViewLibrarianActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButtonViewLibrarianActionPerformed
+        new ViewLibrarianWindow().setVisible(true);
+    }//GEN-LAST:event_jButtonViewLibrarianActionPerformed
+
+    private void jButtonDeleteLibrarianActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButtonDeleteLibrarianActionPerformed
+        new DeleteLibrarianWindow().setVisible(true);
+    }//GEN-LAST:event_jButtonDeleteLibrarianActionPerformed
+
+    private void jButtonLogoutActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButtonLogoutActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButtonLogoutActionPerformed
+
+    private void jButtonBackActionPerformed(ActionEvent evt) {//GEN-FIRST:event_jButtonBackActionPerformed
+        // Replace AdminLOG with the appropriate class or remove if not needed
+        // AdminLOG adminLOG = new AdminLOG();
+        // adminLOG.setVisible(true);
+        // this.dispose();
+    }//GEN-LAST:event_jButtonBackActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -118,7 +177,7 @@ public class AdminDashboard extends javax.swing.JFrame {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
@@ -147,8 +206,11 @@ public class AdminDashboard extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButtonAddLibrarian;
+    private javax.swing.JButton jButtonViewLibrarian;
+    private javax.swing.JButton jButtonDeleteLibrarian;
+    private javax.swing.JButton jButtonLogout;
+    private javax.swing.JButton jButtonBack;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -156,3 +218,42 @@ public class AdminDashboard extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
+
+// Additional window classes (placeholders)
+
+class AddLibrarianWindow extends JFrame {
+    public AddLibrarianWindow() {
+        setTitle("Add Librarian");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        JLabel label = new JLabel("Add Librarian Page");
+        label.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 18));
+        label.setHorizontalAlignment(JLabel.CENTER);
+        add(label);
+    }
+}
+
+class ViewLibrarianWindow extends JFrame {
+    public ViewLibrarianWindow() {
+        setTitle("View Librarian");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        JLabel label = new JLabel("View Librarian Page");
+        label.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 18));
+        label.setHorizontalAlignment(JLabel.CENTER);
+        add(label);
+    }
+}
+
+class DeleteLibrarianWindow extends JFrame {
+    public DeleteLibrarianWindow() {
+        setTitle("Delete Librarian");
+        setSize(400, 300);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+        JLabel label = new JLabel("Delete Librarian Page");
+        label.setFont(new Font("Yu Gothic Medium", Font.PLAIN, 18));
+        label.setHorizontalAlignment(JLabel.CENTER);
+        add(label);
+    }
+}
+
